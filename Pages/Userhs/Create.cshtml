@@ -1,0 +1,64 @@
+﻿@page
+@model RazorPagesMovie.Pages.Userhs.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Userh</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Userh.Name" class="control-label"></label>
+                <input asp-for="Userh.Name" class="form-control" />
+                <span asp-validation-for="Userh.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Userh.Email" class="control-label"></label>
+                <input asp-for="Userh.Email" class="form-control" />
+                <span asp-validation-for="Userh.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Userh.Pwd" class="control-label"></label>
+                <input asp-for="Userh.Pwd" class="form-control" />
+                <span asp-validation-for="Userh.Pwd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Userh.PwdTemp" class="control-label"></label>
+                <input asp-for="Userh.PwdTemp" class="form-control" />
+                <span asp-validation-for="Userh.PwdTemp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Userh.CreateDate" class="control-label"></label>
+                <input asp-for="Userh.CreateDate" class="form-control" />
+                <span asp-validation-for="Userh.CreateDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Userh.LastLoginDate" class="control-label"></label>
+                <input asp-for="Userh.LastLoginDate" class="form-control" />
+                <span asp-validation-for="Userh.LastLoginDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Userh.IdGroup" class="control-label"></label>
+                <input asp-for="Userh.IdGroup" class="form-control" />
+                <span asp-validation-for="Userh.IdGroup" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,44 @@
+﻿@page
+@model RazorPagesMovie.Pages.Options.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Option</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Option.IdGoods" class="control-label"></label>
+                <input asp-for="Option.IdGoods" class="form-control" />
+                <span asp-validation-for="Option.IdGoods" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Option.Name" class="control-label"></label>
+                <input asp-for="Option.Name" class="form-control" />
+                <span asp-validation-for="Option.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Option.Use" /> @Html.DisplayNameFor(model => model.Option.Use)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

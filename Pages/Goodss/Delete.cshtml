@@ -1,0 +1,64 @@
+﻿@page
+@model RazorPagesMovie.Pages.Goodss.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Goods</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Goods.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Goods.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Goods.Category00)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Goods.Category00)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Goods.Category01)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Goods.Category01)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Goods.Category02)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Goods.Category02)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Goods.Use)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Goods.Use)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Goods.IdUser)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Goods.IdUser)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Goods.IdGroup)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Goods.IdGroup)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Goods.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
